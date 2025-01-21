@@ -24,14 +24,17 @@
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
+            pkgs.mysql84
             # terminals
+            pkgs.tldr
+            # pkgs.docker
+            pkgs.lazydocker
             pkgs.neovim
-            pkgs.docker
+            pkgs.gnupg
             pkgs.mkalias
             pkgs.tmux
             pkgs.alacritty
             pkgs.kitty
-            pkgs.iterm2
             pkgs.obsidian
             pkgs.fastfetch
             pkgs.neofetch
@@ -68,14 +71,19 @@
             enable = true;
             brews = [
               #"mas"
+              # "mysql"
+              "vifm"
             ];
             casks = [
+              "docker"
               "firefox"
               "nikitabobko/tap/aerospace"
               "karabiner-elements"
               "capcut"
               "scroll-reverser"
               "jitouch"
+              "google-chrome"
+              "mongodb-compass"
             ];
             # app store
             masApps = {
