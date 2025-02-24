@@ -24,6 +24,12 @@
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
+            pkgs.jetbrains.idea-ultimate
+            pkgs.syncthing
+            pkgs.prometheus
+            pkgs.wget
+            # pkgs.go
+            pkgs.qbittorrent
             pkgs.mysql84
             # terminals
             pkgs.tldr
@@ -73,8 +79,12 @@
               #"mas"
               # "mysql"
               "vifm"
+              "cloudflared"
+              "mpv"
+              "uv"
             ];
             casks = [
+              "vlc"
               "docker"
               "firefox"
               "nikitabobko/tap/aerospace"
